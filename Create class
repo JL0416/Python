@@ -1,0 +1,27 @@
+class person:
+    'this is a test'
+    height = 0
+    weight = 0
+    name = ""
+    number = 0
+    def __init__(self,h=0,w=0,n=""):
+        self.height=h
+        self.weight=w
+        self.name=n
+        person.number+=1
+    
+    def __del__(self):
+        print("finished")
+    
+    def data(self):
+        print(f"名字:{self.name}")
+        print(f"身高:{self.height}")
+        print(f"體重:{self.weight}")
+      
+    def bmidata(self,h=0,w=0):
+        if h==0 and w==0:
+            bmi= self.weight/((self.height/100)**2)
+            print(f"BMI:{bmi:.2f}")
+        else :
+            bmi= w/((h/100)**2)
+            print(f"BMI:{bmi:.2f}")
